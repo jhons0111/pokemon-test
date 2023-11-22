@@ -23,88 +23,75 @@ function pokemon_schema() {
 function pokemon_install()
 {
 
-    // // Lastname Field
-    // $field_name = FieldStorageConfig::create(array(
-    //     'field_name' => 'field_name',
-    //     'entity_type' => 'user',
-    //     'type' => 'string',
-    // ));
-    // $field_name->save();
+    // Lastname Field
+    $field_name = FieldStorageConfig::create(array(
+        'field_name' => 'field_name',
+        'entity_type' => 'user',
+        'type' => 'string',
+    ));
+    $field_name->save();
     
-    // $field_conf_name = FieldConfig::create(array(
-    //     'field_name' => 'field_name',
-    //     'entity_type' => 'user',
-    //     'bundle' => 'user',
-    //     'label' => 'Nombre',
-    // ));
+    $field_conf_name = FieldConfig::create(array(
+        'field_name' => 'field_name',
+        'entity_type' => 'user',
+        'bundle' => 'user',
+        'label' => 'Nombre',
+    ));
 
-    // $field_conf_name->save();
+    $field_conf_name->save();
 
-    // //Create a form display for the default form mode.
-    // \Drupal::service('entity_display.repository')
-    //     ->getFormDisplay('user', 'user', 'default')
-    //     ->setComponent('field_name', array(
-    //     'persist_with_no_fields' => TRUE,
-    // ))->save();
+    //Create a form display for the default form mode.
+    \Drupal::service('entity_display.repository')
+        ->getFormDisplay('user', 'user', 'default')
+        ->setComponent('field_name', array(
+        'persist_with_no_fields' => TRUE,
+    ))->save();
 
-    // // Lastname Field
-    // $field_lastname = FieldStorageConfig::create(array(
-    //     'field_name' => 'field_lastname',
-    //     'entity_type' => 'user',
-    //     'type' => 'string',
-    // ));
-    // $field_lastname->save();
+    // Lastname Field
+    $field_lastname = FieldStorageConfig::create(array(
+        'field_name' => 'field_lastname',
+        'entity_type' => 'user',
+        'type' => 'string',
+    ));
+    $field_lastname->save();
     
-    // $field_conf_lastname = FieldConfig::create(array(
-    //     'field_name' => 'field_lastname',
-    //     'entity_type' => 'user',
-    //     'bundle' => 'user',
-    //     'label' => 'Apellido',
-    // ));
+    $field_conf_lastname = FieldConfig::create(array(
+        'field_name' => 'field_lastname',
+        'entity_type' => 'user',
+        'bundle' => 'user',
+        'label' => 'Apellido',
+    ));
 
-    // $field_conf_lastname->save(); 
+    $field_conf_lastname->save(); 
 
-    // //Create a form display for the default form mode.
-    // \Drupal::service('entity_display.repository')
-    //     ->getFormDisplay('user', 'user', 'default')
-    //     ->setComponent('field_lastname', array(
-    //     'persist_with_no_fields' => TRUE,
-    // ))->save();
+    //Create a form display for the default form mode.
+    \Drupal::service('entity_display.repository')
+        ->getFormDisplay('user', 'user', 'default')
+        ->setComponent('field_lastname', array(
+        'persist_with_no_fields' => TRUE,
+    ))->save();
     
-    // // Phone Field
-    // $field_phone = FieldStorageConfig::create(array(
-    //     'field_name' => 'field_phone',
-    //     'entity_type' => 'user',
-    //     'type' => 'string',
-    // ));
-    // $field_phone->save();
+    // Phone Field
+    $field_phone = FieldStorageConfig::create(array(
+        'field_name' => 'field_phone',
+        'entity_type' => 'user',
+        'type' => 'string',
+    ));
+    $field_phone->save();
     
-    // $field_conf_phone = FieldConfig::create(array(
-    //     'field_name' => 'field_phone',
-    //     'entity_type' => 'user',
-    //     'bundle' => 'user',
-    //     'label' => 'Telefono',
-    // ));
+    $field_conf_phone = FieldConfig::create(array(
+        'field_name' => 'field_phone',
+        'entity_type' => 'user',
+        'bundle' => 'user',
+        'label' => 'Telefono',
+    ));
 
-    // $field_conf_phone->save();
+    $field_conf_phone->save();
 
-    // //Create a form display for the default form mode.
-    // \Drupal::service('entity_display.repository')
-    //     ->getFormDisplay('user', 'user', 'default')
-    //     ->setComponent('field_phone', array(
-    //     'persist_with_no_fields' => TRUE,
-    // ))->save();
-}
-
-/**
- * Implements hook_uninstall().
- */
-function pokemon_uninstall() {
-
-    $schema = Database::getConnection()->schema();
-
-    // Delete the table pokemon_favorites
-    if ($schema->tableExists('pokemon_favorites')) {
-        $schema->dropTable('pokemon_favorites');
-    }
+    //Create a form display for the default form mode.
+    \Drupal::service('entity_display.repository')
+        ->getFormDisplay('user', 'user', 'default')
+        ->setComponent('field_phone', array(
+        'persist_with_no_fields' => TRUE,
+    ))->save();
 }
