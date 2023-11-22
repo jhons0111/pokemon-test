@@ -1,0 +1,36 @@
+<div class="main-content">
+    {# Banner section #}
+    <div class="banner-favorites-content">
+        <img src="/modules/custom/pokemon/images/favorites-pokemons.jpg" alt="banner favorites" title="banner favorites">
+    </div>
+
+    <div class="body-content-favorites">
+
+        <div class="subtitle">
+            <h2>Your favorites pokemons are here</h2>
+        </div>
+        <div class="main-content">
+            
+            <div class="sidebar">
+
+                <img src="/modules/custom/pokemon/images/pikachu.png" alt="banner favorites" title="banner favorites">
+            </div>
+
+            <div class="content">
+                {# Render pokemon #}
+                {% if data %}
+                    {% for favorite in data %}
+                    <div class="pokemon-card">
+                        <picture>
+                            <img src="{{ favorite.picture }}">
+                        </picture>
+                        <p>{{ favorite.pokemon_name }}</p>
+                    </div>
+                    {% endfor %}
+                    {% else %}
+                        <p>No tienes Pokémon favoritos.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>

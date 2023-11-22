@@ -1,0 +1,28 @@
+{% block header %}
+    <div class="header">
+        {{ page.header }}
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="content">
+        {{ page.content }}
+    </div>
+{% endblock %}
+
+{# {% block footer %}
+  {{ page.footer }}
+{% endblock %} #}
+
+<div class="footer">
+    <div class="footer-one">
+        {% block footer_one %}
+                {{ page.footer_one }}
+        {% endblock %}
+    </div
+    <div class="footer-two">
+        {% block footer_two %}
+                {{ page.footer_two }}
+        {% endblock %}
+    </div
+</div>

@@ -1,0 +1,17 @@
+name: Pokemon
+type: theme
+description: 'The for back end test'
+package: Core
+version: 1.0
+core_version_requirement: ^8 || ^9
+base theme: false
+
+libraries:
+  - pokemon_theme/global-styling
+
+regions:
+  header: 'Header'
+  content: 'Content'
+  footer: 'Footer'
+  footer_one: 'Footer one'
+  footer_two: 'Footer two'

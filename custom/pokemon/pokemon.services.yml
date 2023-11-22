@@ -1,0 +1,4 @@
+services:
+  pokemon.pokemon_favorites:
+    class: Drupal\pokemon\Service\pokemonFavoritesService
+    arguments: ['@database']

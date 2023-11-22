@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * Implements hook theme
+ *
+ * @param  mixed $existing
+ * @param  mixed $type
+ * @param  mixed $theme
+ * @param  mixed $path
+ * @return void
+ */
+
+function pokemon_theme($existing, $type, $theme, $path) {
+
+    $templates = ['signin', 'signup', 'favorites'];
+  
+    foreach ($templates as $key => $value) {
+      $request[$value] = [ 'variables' => ['data' => null]];
+    }
+    return $request;
+}
+
+/**
+ * pokemon_preprocess_page
+ *
+ * @param  mixed $variables
+ * @return void
+ */
+
+ function pokemon_preprocess_page(&$variables) {
+
+  $variables['#attached']['library'][] =  'pokemon/pokemon-module-styles';
+}

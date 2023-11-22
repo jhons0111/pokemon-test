@@ -1,0 +1,31 @@
+pokemon.signin:
+  path: '/sign-in'
+  defaults:
+    _controller: '\Drupal\pokemon\Controller\formsController::signin'
+    _title: "Sign in "
+  requirements:
+    _permission: 'access content'
+
+pokemon.signup:
+  path: '/sign-up'
+  defaults:
+    _controller: '\Drupal\pokemon\Controller\formsController::signup'
+    _title: "Sign up"
+  requirements:
+    _permission: 'access content'
+
+pokemon.favorites_page:
+  path: '/favorites'
+  defaults:
+    _controller: '\Drupal\pokemon\Controller\favoritesController::favorites'
+    _title: "List of favorites"
+  requirements:
+    _permission: 'access content'
+
+pokemon.favorites:
+  path: '/api/save-favorite-pokemon'
+  defaults:
+    _controller: '\Drupal\pokemon\Controller\favoritesController::saveFavoritePokemon'
+    _title: 'Save Favorite Pokemon'
+  requirements:
+    _permission: 'access content'
